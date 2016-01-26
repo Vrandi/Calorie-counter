@@ -2,9 +2,31 @@
 <head>
   <meta charset='UTF-8'>
   <title>Calorie Counter</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <h1>Calorie Counter</h1>
-
+  <header>
+    <h1>Calorie Counter</h1>
+  </header>
+  <div class="container">
+    <form>
+      <div class="input-fields">
+        <div class="form-element">
+          <input type="text" id="food" placeholder="Add a meal..."></input>
+        </div>
+        <div class="form-element">
+          <input type="number" id="kcal" placeholder="Kcal..."></input>
+        </div>
+        <div class="form-element">
+          <input type="datetime-local" id="date"></input>
+        </div>
+        <button class="add-item-button"></button>
+      </div>
+    </form>
+  </div>
+  <div class="listener">
+    <p>Meals:</p>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
