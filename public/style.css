@@ -1,0 +1,56 @@
+body {
+  box-sizing: border-box;
+  position: relative;
+}
+
+header {
+  text-align: center;
+}
+
+.container, .input-fields {
+  position: fixed;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  background-image: url('plate.svg');
+  background-repeat: no-repeat;
+  left: 30%;
+  min-height: 500px;
+  top: 60%;
+  width: 600px
+}
+
+.input-fields {
+  text-align: center;
+  left: 50%;
+  min-height: 200px;
+  top: 55%;
+  width: 300px
+}
+
+.add-item-button {
+  background-image: url('plus.png');
+  background-repeat: no-repeat;
+  border: 0;
+  border-radius: 20px;
+  height: 50px;
+  left: 40px;
+  vertical-align: middle;
+  width: 50px;
+}
+
+#food, #kcal, #date {
+  margin: 5px 5px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 1px 1px 1px rgba(105, 146, 150, 0.7);
+  height: 25px
+}
+
+.listener {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
