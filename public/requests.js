@@ -4,6 +4,19 @@ function Request() {
   var _this = this;
   this.url = 'http://localhost:3000/meals';
 
+  this.post = function(data, cb) {
+    this.createRequest('POST', this.url, data, cb);
+  };
+
+  this.get = function(cb) {
+    this.createRequest('GET', this.url, null, cb);
+  };
+
+  this.del = function(id, cb) {
+    var url = this.url + '/' + id;
+    this.createRequest('DELETE', url, null, cb);
+  };
+
   this.createRequest = function(method, url, data, callback) {
     var request = new XMLHttpRequest();
     request.open(method, url);
