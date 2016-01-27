@@ -21,6 +21,12 @@ function Controller(request, view) {
     _this.cleanContent();
   });
 
+  this.view.list.addEventListener('click', function(event) {
+    if (event.target.className === 'delete') {
+      _this.request.del(event.target.parentNode.parentNode.id, _this.view.deleteElement);
+    }
+  })
+
   this.showCurrentItems = function() {
     this.request.get(this.view.listMeals);
   };

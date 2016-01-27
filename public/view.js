@@ -13,6 +13,11 @@ function View() {
     _this.list.innerHTML += element;
   };
 
+  this.deleteElement = function(id) {
+    var meal = document.getElementById(id);
+    meal.remove();
+  };
+
   this.createMeals = function(meal) {
     var element = `<tr id="${meal.meals_id}">
                      <td>${meal.name}</td>
@@ -26,4 +31,5 @@ function View() {
   this.dateFormat = function(date) {
     return date.split('T')[0];
   };
+
 }
