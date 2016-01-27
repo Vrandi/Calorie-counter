@@ -22,9 +22,13 @@ function View() {
     var element = `<tr id="${meal.meals_id}">
                      <td>${meal.name}</td>
                      <td>${meal.calories}</td>
-                     <td>${meal.date}</td>
+                     <td>${this.dateFormat(meal.date)}</td>
                    </tr>`;
     return element;
   };
+
+  this.dateFormat = function(date) {
+    return date.split('T')[0];
+  }
 
 }
