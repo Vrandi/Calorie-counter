@@ -13,12 +13,19 @@ connection.connect();
 function AddItem(params, cb) {
   connection.query('INSERT INTO meals SET ?', params, function(err, result) {
     if (err) throw err;
-    cb({"status": "ok"});
+    GetItem(result.insertId, cb);
   });
 }
 
 function GetItems(cb) {
   connection.query('SELECT meals_id, name, calories, date FROM meals', function(err, result) {
+    if (err) throw err;
+    cb(result);
+  });
+}
+
+function GetItem(id, cb) {
+  connection.query('SELECT meals_id, name, calories, date FROM meals WHERE meals_id= ?', id, function(err, result) {
     if (err) throw err;
     cb(result);
   });
