@@ -32,9 +32,9 @@ function GetItem(id, cb) {
 }
 
 function DeleteItem(id, cb) {
-  connection.guery('DELETE FROM meals WHERE meals_id= ?', id, function(err, result) {
+  connection.query('DELETE FROM meals WHERE meals_id= ?', id, function(err, result) {
     if (err) throw err;
-    cb({"status" : "ok"});
+    cb(id);
   });
 }
 
