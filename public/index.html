@@ -2,6 +2,8 @@
 <head>
   <meta charset='UTF-8'>
   <title>Calorie Counter</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -9,32 +11,35 @@
     <h1>Calorie Counter</h1>
   </header>
   <div class="container">
-    <form>
-      <div class="input-fields">
-        <div class="form-element">
-          <input type="text" id="food" placeholder="Add a meal..."></input>
+    <div class="col-md-7 form">
+      <form>
+        <div class="input-fields">
+          <div class="form-element">
+            <input type="text" id="food" placeholder="Add a meal..."></input>
+          </div>
+          <div class="form-element">
+            <input type="number" id="kcal" placeholder="Kcal..."></input>
+          </div>
+          <div class="form-element">
+            <input type="datetime-local" id="date"></input>
+          </div>
+          <button class="add-item-button"></button>
         </div>
-        <div class="form-element">
-          <input type="number" id="kcal" placeholder="Kcal..."></input>
-        </div>
-        <div class="form-element">
-          <input type="datetime-local" id="date"></input>
-        </div>
-        <button class="add-item-button"></button>
-      </div>
-    </form>
-  </div>
-  <div class="listener">
-    <table>
-      <thead>
-        <tr>
-          <th>Meal</th>
-          <th>Kcal</th>
-          <th>Date, Time</th>
-        </tr>
-      </thead>
-      <tbody class="meals"></tbody>
-    </table>
+      </form>
+    </div>
+    <div class="col-md-5">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Meal</th>
+            <th>Kcal</th>
+            <th>Date, Time</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="meals"></tbody>
+      </table>
+    </div>
   </div>
   <script src="requests.js"></script>
   <script src="view.js"></script>
