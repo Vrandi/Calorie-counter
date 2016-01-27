@@ -7,27 +7,20 @@ header {
   text-align: center;
 }
 
-.container, .input-fields {
-  position: fixed;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+h1 {
+  margin: 10px 0px;
 }
 
-.container {
+.form {
   background-image: url('plate.svg');
   background-repeat: no-repeat;
-  left: 30%;
-  min-height: 500px;
-  top: 60%;
-  width: 600px
+  background-position: center;
+  height: 400px;
 }
 
 .input-fields {
   text-align: center;
-  left: 50%;
-  min-height: 200px;
-  top: 55%;
-  width: 300px
+  padding-top: 130px;
 }
 
 .add-item-button {
@@ -47,6 +40,10 @@ header {
   border-radius: 20px;
   box-shadow: 1px 1px 1px rgba(105, 146, 150, 0.7);
   height: 25px
+}
+
+#food:focus, #kcal:focus, #date:focus, .add-item-button:focus {
+  outline: none;
 }
 
 .listener {
