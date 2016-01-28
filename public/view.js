@@ -9,7 +9,7 @@ function View() {
   };
 
   this.addElements = function(meal) {
-    var element = _this.createMeals(meal);
+    var element = template(meal);
     _this.list.innerHTML += element;
   };
 
@@ -18,18 +18,13 @@ function View() {
     meal.remove();
   };
 
-  this.createMeals = function(meal) {
-    var element = `<tr id="${meal.meals_id}">
-                     <td>${meal.name}</td>
-                     <td>${meal.calories}</td>
-                     <td>${this.dateFormat(meal.date)}</td>
-                     <td><button class="delete">Delete</button></td>
-                   </tr>`;
-    return element;
-  };
-
-  this.dateFormat = function(date) {
-    return date.split('T')[0];
+  this.filter = function(date) {
+    var dates = document.querySelectorAll('.meal-date');
+    [].forEach.call(dates, function(item) {
+       item.parentNode.style.display = (date && (date != displayDate(item)))
+       ? "none"
+       : "table-row";
+    });
   };
 
 }
