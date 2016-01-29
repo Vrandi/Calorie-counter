@@ -28,17 +28,29 @@
       </form>
     </div>
     <div class="col-md-5">
-      <table class="table">
-        <thead>
-          <tr>
-            <th>Meal</th>
-            <th>Kcal</th>
-            <th>Date, Time</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody class="meals"></tbody>
-      </table>
+      <div class="row">
+        <div class="col-xs-6">
+          <input type="date" class="filter-date"></input>
+          <button class="filter-button"><span class="glyphicon glyphicon-repeat"></span></button>
+        </div>
+        <div class="col-xs-6">
+          <dl>
+            <dt>Calorie Consumption</dt>
+            <dd class="sum-calorie">0</dd>
+          </dl>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Meal</th>
+              <th>Kcal</th>
+              <th>Date   Time</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody class="meals"></tbody>
+        </table>
+      </div>
     </div>
   </div>
   <script src="requests.js"></script>
