@@ -1,8 +1,6 @@
 'use strict';
 
 function Request() {
-  var _this = this;
-
   this.url = 'http://localhost:3000/meals';
 
   this.post = function(data, cb) {
