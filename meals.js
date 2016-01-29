@@ -1,15 +1,6 @@
 'use strict';
 
-var mysql = require('mysql');
-var connection = mysql.createConnection({
-  host: 'localhost',
-  user: 'user',
-  password: 'dagi',
-  database: 'meals',
-  timezone: 'utc'
-});
-
-connection.connect();
+var connection = require('./mysqlservice.js').connection;
 
 function AddItem(params, cb) {
   connection.query('INSERT INTO meals SET ?', params, function(err, result) {

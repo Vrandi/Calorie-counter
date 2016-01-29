@@ -1,7 +1,10 @@
 'use strict';
 
 var express = require('express');
+var service = require('./mysqlservice.js');
+service.init();
 var meals = require('./meals.js');
+
 var bodyParser = require('body-parser');
 var app = express();
 
