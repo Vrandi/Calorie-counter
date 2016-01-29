@@ -5,6 +5,7 @@ body {
 
 header {
   text-align: center;
+  padding: 10px 10px;
 }
 
 h1 {
@@ -34,12 +35,7 @@ h1 {
   width: 50px;
 }
 
-.delete {
-  border-radius: 5px;
-  background-color: #BFBFBF;
-}
-
-#food, #kcal, #date {
+#food, #kcal, #date, .filter-date {
   margin: 5px 5px;
   border: none;
   border-radius: 20px;
@@ -48,11 +44,30 @@ h1 {
   padding-left: 5px;
 }
 
-#food:focus, #kcal:focus, #date:focus, .add-item-button:focus {
+.filter-button, .delete {
+  background-color: white;
+  border-radius: 10px;
+}
+
+#food:focus, #kcal:focus, #date:focus, .add-item-button:focus, .filter-date:focus, .filter-button:focus {
   outline: none;
+}
+
+.filter-date::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.filter-date:focus::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
 }
 
 .listener {
   position: fixed;
   right: 0%;
+}
+
+.col-xs-6 {
+  text-align: center;
 }
